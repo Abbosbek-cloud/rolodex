@@ -14,4 +14,20 @@ export default class MyComponent extends Component {
       count: 0,
     };
   }
+
+  render() {
+    return (
+      <div>
+        <p>{this.state.count}</p>
+        <button
+          onClick={() => {
+            this.setState({ count: 10 });
+          }}
+        >
+          Incr
+        </button>
+        <button>Decr</button>
+      </div>
+    );
+  }
 }
